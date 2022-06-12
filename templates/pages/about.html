@@ -1,0 +1,36 @@
+{% extends '_partials/base.html' %}
+{% load static %}
+
+{% block body %}
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container  ">
+      <div class="row">
+        <div class="col-md-6 col-lg-5 ">
+          <div class="img-box">
+            <img src="{% static 'images/hacker.jpg' %}" alt="">
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-7">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                Hakkımızda
+              </h2>
+            </div>
+            <p>
+              Who projesinin yaratıcıları olarak temel amacımız internet ortamındaki güvenliğinizden emin olmaktır. Zararlı saldırganlar
+              tarafından ele geçirilen kimlik bilgileri her geçen gün devasa boyutlara ulaşmaktadır. Who, sizi internet ortamında
+              bıraktığınız her türlü veri hakkında bilgilendirir ve belirli periyotlarla size rapor sunarak kişisel siber istihbarat
+              hizmetini gerçekleştirir!
+            </p>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+{% endblock  %}

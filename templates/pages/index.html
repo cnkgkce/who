@@ -1,0 +1,204 @@
+{% extends '_partials/base.html' %}
+
+{% load static %}
+
+{% block body %}
+
+  <div class="hero_area">
+    <div class="hero_social">
+
+      <a href="">
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+      </a>
+      <a href="">
+        <i class="fa fa-linkedin" aria-hidden="true"></i>
+      </a>
+      <a href="">
+        <i class="fa fa-instagram" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <!--Navbar gelecek-->
+
+
+
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container-fluid ">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="detail-box">
+                    <h1>
+                      Sen Kimsin ?
+                    </h1>
+                    <p>
+                      Who, hedef kişi hakkında detaylı kişisel siber istihbarat hizmeti sunan kapsamlı bir projedir.
+                    </p>
+                    <div class="btn-box">
+                      <a href="{% url 'show-contact-page' %}" class="btn1">
+                        İletişim
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="img-box">
+                    <img src="{% static 'images/sunset.png' %}" alt="" height="750">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+         
+        </div>
+       
+      </div>
+
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container  ">
+      <div class="row">
+        <div class="col-md-6 col-lg-5 ">
+          <div class="img-box">
+            <img src="{% static 'images/ai.jpg' %}" alt="">
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-7">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                Hakkımızda
+              </h2>
+            </div>
+            <p>
+              Who projesinin yaratıcıları olarak temel amacımız internet ortamındaki güvenliğinizden emin olmaktır. Zararlı saldırganlar
+              tarafından ele geçirilen kimlik bilgileri her geçen gün devasa boyutlara ulaşmaktadır. Who, sizi internet ortamında
+              bıraktığınız her türlü veri hakkında bilgilendirir ve belirli periyotlarla size rapor sunarak kişisel siber istihbarat
+              hizmetini gerçekleştirir!
+            </p>
+            <a href="{% url 'show-about-page' %}">
+              Daha fazlası için...
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <!-- feature section -->
+
+  <section class="feature_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Who size neler sunar ?
+        </h2>
+
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-lg-3">
+          <div class="box">
+            <div class="img-box">
+              <img src="{% static 'images/f1.png' %}" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Kişisel Veri Takibi
+              </h5>
+              <p>
+                Tarafımıza sağladığınız bilgiler ışığında olası bir sızıntı durumunu yakınen takip ederiz
+              </p>
+              <a href="">
+                <span>
+                  Daha fazlası için...
+                </span>
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="box">
+            <div class="img-box">
+              <img src="{% static 'images/f2.png' %}" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Alarmlar & Bildirimler
+              </h5>
+              <p>
+                Sızıntı durumunda hızlı bir şekilde tarafınıza bildirimler göndeririz.
+              </p>
+              <a href="">
+                <span>
+                  Daha fazlası için...
+                </span>
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="box">
+            <div class="img-box">
+              <img src="{% static 'images/f3.png' %}" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Sızıntı Raporları
+              </h5>
+              <p>
+                Belirli periyotlarla tarafınıza güvenliğinizi arttırmak için birtakım raporlar göndeririz.
+              </p>
+              <a href="">
+                <span>
+                  Daha fazlası için...
+                </span>
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="box">
+            <div class="img-box">
+              <img src="{% static 'images/f4.png' %}" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+              Güvenli Internet
+              </h5>
+              <p>
+                Who sayesinde güvenli bir şekilde internette varlığınızı sürdürebilirsiniz.
+              </p>
+              <a href="">
+                <span>
+                  Daha fazlası için...
+                </span>
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- end feature section -->
+
+
+
+  {% endblock %}

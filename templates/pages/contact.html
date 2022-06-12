@@ -1,0 +1,53 @@
+{% extends '_partials/base.html' %}
+{% load static %}
+
+
+{% block body %}
+
+  <!-- contact section -->
+
+  <section class="contact_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form_container">
+            <div class="heading_container">
+              <h2>
+               Bizimle İletişime Geçin
+              </h2>
+            </div>
+            <form action="">
+              <div>
+                <input type="text" placeholder="İsim-Soyisim" />
+              </div>
+              <div>
+                <input type="email" placeholder="Email" />
+              </div>
+            
+              <div>
+                <input type="text" class="message-box" placeholder="Mesajınız" />
+              </div>
+              <div class="d-flex ">
+                <button>
+                  Gönder
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="{% static 'images/contact-img.jpg' %}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end contact section -->
+
+
+
+
+
+{% endblock %}
