@@ -28,16 +28,28 @@
                   <a class="nav-link" href="{% url 'show-contact-page' %}">İletişim</a>
                 </li>
               </ul>
+
+              {% if user.is_authenticated %}
               <div class="user_option-box">
-                <a href="">
+               
+                <a href="{% url 'logout-user' %}">
+                  <i class="fa fa-sign-out aria-hidden="true"></i>
+                </a>
+
+              {% else %}
+              <div class="user_option-box">
+                <a href="{% url 'login-user' %}">
                   <i class="fa fa-sign-in aria-hidden="true"></i>
                 </a>
 
-                <a href="">
+                <a href="{% url 'register-user' %}">
                   <i class="fa fa-user-plus" aria-hidden="true"></i>
                 </a>
 
               </div>
+
+              {% endif %}
+
             </div>
           </nav>
         </div>

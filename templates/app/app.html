@@ -1,9 +1,33 @@
-{% extends '_partials/base.html' %}
+{% extends 'partials/base.html' %}
+{% load static %}
 
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/search.css' %}">
+
+{% endblock %}
 
 {% block body %}
 
-<p>App page</p>
+<div class="container">
+<!--Buraya Django Form gelebilir ama henüz django form ve custom css özelliklerini kullanmayı bilmediğim için erteliyorum. Buraya bakılmalı-->
+    <form method="post" action="query">
+        {% csrf_token %}
+    <div class="row height d-flex justify-content-center align-items-center">
+
+      <div class="col-md-8">
+
+        <div class="search">
+          <i class="fa fa-search"></i>
+          <input type="text" class="form-control" placeholder="Araştırmak istediğiniz kullanıcı adını giriniz..." id="username" name="username">
+          <button class="btn btn-primary">Ara</button>
+        </div>
+        
+      </div>
+      
+    </div>
+</form>
+</div>
 
 
 {% endblock %}

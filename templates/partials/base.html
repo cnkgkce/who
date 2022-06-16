@@ -15,8 +15,7 @@
   <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
 
   <title>Who?</title>
-
-
+  
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
   <!--owl slider stylesheet -->
@@ -35,12 +34,12 @@
 </head>
 
 <body>
-{% include '_partials/navbar.html' %}
+{% include 'partials/navbar.html' %}
 {% block body %}{% endblock %}
 
 
-{% include '_partials/footer.html' %}
-{% include '_partials/scripts.html' %}
+{% include 'partials/footer.html' %}
+{% include 'partials/scripts.html' %}
 
 
 </body>
