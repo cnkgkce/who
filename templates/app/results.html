@@ -5,8 +5,15 @@
 
 <h1>Sonuçlar burada</h1>
 
-{% if github %}
-<p>{{github}}</p>
+{% if links %}
+
+{% for key,value in links.items %}
+
+
+<a href="{{value}}">{{key}}</a><br>
+
+
+{% endfor %}
 
 {% endif %}
 

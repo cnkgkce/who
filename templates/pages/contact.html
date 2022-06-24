@@ -1,6 +1,6 @@
 {% extends 'partials/base.html' %}
 {% load static %}
-
+{% load crispy_forms_tags %}
 
 {% block body %}
 
@@ -16,17 +16,25 @@
                Bizimle İletişime Geçin
               </h2>
             </div>
-            <form action="">
-              <div>
-                <input type="text" placeholder="İsim-Soyisim" />
-              </div>
-              <div>
-                <input type="email" placeholder="Email" />
-              </div>
+
+            {% if messages %}
             
-              <div>
-                <input type="text" class="message-box" placeholder="Mesajınız" />
+            {% for message in messages %}
+            
+            <div class="container">
+
+              <div class="alert alert-{{message.tags}}">
+                {{message}}
               </div>
+
+            </div>
+            {% endfor %}
+            {% endif %}
+
+            <form method="POST">
+            {% csrf_token %}
+              {{form|crispy}}
+
               <div class="d-flex ">
                 <button>
                   Gönder
@@ -34,6 +42,7 @@
               </div>
             </form>
           </div>
+          <br>
         </div>
         <div class="col-md-6">
           <div class="img-box">

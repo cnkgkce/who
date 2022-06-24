@@ -44,9 +44,6 @@ def register_user(request):
 
 
 
-
-
-
 def login_user(request):
     """
     Bu fonksiyon aldığı request type'Ina göre ya login.html'i render eder ya da register.html içerisinde gönderilen form bilgileriyle bir kullanıcıyı kayıt eder
