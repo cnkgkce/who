@@ -2,19 +2,34 @@
 
 {% block body %}
 
+{% if sites %}
 
-<h1>Sonuçlar burada</h1>
-
-{% if links %}
-
-{% for key,value in links.items %}
+<div class="row">
 
 
-<a href="{{value}}">{{key}}</a><br>
+{% for name,site in sites.items %}
+
+<div class="col-sm-4">
+<!--https://stackoverflow.com/questions/50003216/bootstrap-4-cards-how-do-i-make-horizontal-repeating-cards-in-three-columns  linkine git bak -->
+
+<div class="container">
+<div class="card mb-3" style="width: 18rem;">
+    <img src="{{site.image.url}}" alt="Site Image" class="card-img-top">
+    <div class="card-body">
+        <h5 class="card-title">{{site.name}}</h5>
+        <p class="card-text">Category : {{site.category}}</p>
+        <a href="{{site.url}}" class="btn btn-primary">Bağlantıya git</a>
+    </div>
+</div>
+</div>
+</div>
 
 
 {% endfor %}
 
+
+
+</div>
 {% endif %}
 
 
